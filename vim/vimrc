@@ -123,7 +123,7 @@ nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
 
 " NERDtree on <leader>t
-nnoremap <leader>t :NERDTree<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\.bak$', '\~$']
 let NERDTreeChDirMode=2 " CWD is changed whenever the tree root is changed

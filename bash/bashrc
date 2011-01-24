@@ -1,11 +1,14 @@
 alias ls="ls -hF"
+alias json='python -m json.tool' # for pretty printed json
 export PATH=$PATH:~/bin
 export MANPATH=$MANPATH:/opt/local/man
 export PS1='\[\e[0;32m\][\w]\[\e[0m\] $(vcprompt)\$ '
 export EDITOR="vim"
+# Python startup
+export PYTHONSTARTUP=~/.pythonrc
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
-. ~/bin/virtualenvwrapper_bashrc
+. /usr/local/bin/virtualenvwrapper.sh
 # PIP
 export PIP_LOG_FILE=/tmp/pip-log.txt
 export PIP_DOWNLOAD_CACHE=/tmp/pip_cache

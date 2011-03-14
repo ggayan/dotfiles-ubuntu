@@ -17,4 +17,3 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 . ~/django/extras/django_bash_completion
-. ~/git/git/contrib/completion/git-completion.bash 

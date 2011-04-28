@@ -8,4 +8,5 @@ install-vim:
 install-bash:
 	rm -f ~/.bashrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
+	ln -s `pwd`/bash/vcprompt ~/bin/vcprompt
 

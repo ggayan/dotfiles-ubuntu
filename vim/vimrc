@@ -17,12 +17,12 @@ set modelines=0
 syntax on
 if has("gui_running")
   colorscheme oceandeep
-  set guifont=Menlo:h12
-  set fuoptions=maxvert,maxhorz
+  " set guifont=Menlo:h12
+  " set fuoptions=maxvert,maxhorz
   " does not work properly on os x
   " au GUIEnter * set fullscreen
   set list listchars=tab:›\ ,trail:·,eol:¬ " mark trailing white space
-  set colorcolumn=79 " My terminal doesn't support this
+  " set colorcolumn=79 " My terminal doesn't support this
 else
   colorscheme myterm
 endif

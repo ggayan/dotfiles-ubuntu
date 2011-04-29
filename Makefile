@@ -2,9 +2,9 @@ install: install-git install-vim install-vcprompt install-bash install-django-ba
 
 install-git:
 	@rm -f ~/.gitconfig
-	@rm -f ~/.gitignore_global
+	@rm -f ~/.global_ignore
 	@cp `pwd`/git/gitconfig ~/.gitconfig
-	@ln -s `pwd`/git/gitignore_global ~/.gitignore_global
+	@ln -s `pwd`/git/global_ignore ~/.global_ignore
 
 install-vim:
 	@rm -rf ~/.vim ~/.vimrc

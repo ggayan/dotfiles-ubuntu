@@ -1,0 +1,26 @@
+[core]
+	autocrlf = false
+	excludesfile = ~/.gitignore_global
+	editor = vim
+	pager = less -FRSX
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+
+[user]
+	name = Gabriel Gayan
+	email = my@email.com
+
+[github]
+	user = ggayan
+	token = secret

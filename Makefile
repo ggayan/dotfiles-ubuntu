@@ -1,20 +1,30 @@
-install: install-vim install-vcprompt install-bash install-django-bash-completion
+install: install-git install-vim install-vcprompt install-bash install-django-bash-completion reminders
+
+install-git:
+	@rm -f ~/.gitconfig
+	@rm -f ~/.gitignore_global
+	@cp `pwd`/git/gitconfig ~/.gitconfig
+	@ln -s `pwd`/git/gitignore_global ~/.gitignore_global
 
 install-vim:
-	rm -rf ~/.vim ~/.vimrc
-	ln -s `pwd`/vim ~/.vim
-	ln -s ~/.vim/vimrc ~/.vimrc
+	@rm -rf ~/.vim ~/.vimrc
+	@ln -s `pwd`/vim ~/.vim
+	@ln -s ~/.vim/vimrc ~/.vimrc
 
 install-vcprompt:
-	mkdir -p ~/bin
-	rm -f ~/bin/vcprompt
-	ln -s `pwd`/vcprompt/vcprompt ~/bin/vcprompt
+	@mkdir -p ~/bin
+	@rm -f ~/bin/vcprompt
+	@ln -s `pwd`/vcprompt/vcprompt ~/bin/vcprompt
 
 install-bash:
-	rm -f ~/.bashrc
-	ln -s `pwd`/bash/bashrc ~/.bashrc
+	@rm -f ~/.bashrc
+	@ln -s `pwd`/bash/bashrc ~/.bashrc
 
 install-django-bash-completion:
-	rm -f ~/.django_bash_completion
-	ln -s `pwd`/django/django_bash_completion ~/.django_bash_completion 
+	@rm -f ~/.django_bash_completion
+	@ln -s `pwd`/django/django_bash_completion ~/.django_bash_completion 
+
+reminders:
+	@echo "installation finished"
+	@echo "remember to update .gitconfig email and github token"
 

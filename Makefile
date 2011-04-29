@@ -1,18 +1,20 @@
-install: vim vcprompt bash django-bash-completion
+install: install-vim install-vcprompt install-bash install-django-bash-completion
 
-vim:
+install-vim:
 	rm -rf ~/.vim ~/.vimrc
 	ln -s `pwd`/vim ~/.vim
 	ln -s ~/.vim/vimrc ~/.vimrc
 
-vcprompt:
+install-vcprompt:
 	mkdir -p ~/bin
 	rm -f ~/bin/vcprompt
-	ln -s `pwd`/bash/vcprompt ~/bin/vcprompt
+	ln -s `pwd`/vcprompt/vcprompt ~/bin/vcprompt
 
-bash:
+install-bash:
 	rm -f ~/.bashrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
 
-django-bash-completion:
+install-django-bash-completion:
+	rm -f ~/.django_bash_completion
 	ln -s `pwd`/django/django_bash_completion ~/.django_bash_completion 
+

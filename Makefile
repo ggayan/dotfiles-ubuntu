@@ -1,28 +1,33 @@
-install: install-git install-vim install-vcprompt install-bash install-django-bash-completion reminders
+install: install-git install-vim install-vcprompt install-bash install-django-bash-completion install-zsh reminders
 
 install-git:
 	@rm -f ~/.gitconfig
 	@rm -f ~/.global_ignore
 	@cp `pwd`/git/gitconfig ~/.gitconfig
-	@ln -s `pwd`/git/global_ignore ~/.global_ignore
+	@ln -sf `pwd`/git/global_ignore ~/.global_ignore
 
 install-vim:
 	@rm -rf ~/.vim ~/.vimrc
-	@ln -s `pwd`/vim ~/.vim
-	@ln -s ~/.vim/vimrc ~/.vimrc
+	@ln -sf `pwd`/vim ~/.vim
+	@ln -sf ~/.vim/vimrc ~/.vimrc
 
 install-vcprompt:
 	@mkdir -p ~/bin
 	@rm -f ~/bin/vcprompt
-	@ln -s `pwd`/vcprompt/vcprompt ~/bin/vcprompt
+	@ln -sf `pwd`/vcprompt/vcprompt ~/bin/vcprompt
 
 install-bash:
 	@rm -f ~/.bashrc
-	@ln -s `pwd`/bash/bashrc ~/.bashrc
+	@ln -sf `pwd`/bash/bashrc ~/.bashrc
 
 install-django-bash-completion:
 	@rm -f ~/.django_bash_completion
-	@ln -s `pwd`/django/django_bash_completion ~/.django_bash_completion 
+	@ln -sf `pwd`/django/django_bash_completion ~/.django_bash_completion 
+
+install-zsh:
+	@echo "beggining oh-my-zsh installation"
+	wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+	@ln -sf `pwd`/zsh/zshrc ~/.zshrc
 
 reminders:
 	@echo "installation finished"
